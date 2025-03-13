@@ -8,7 +8,7 @@ const io = require("socket.io")(http, {
   },
 });
 
-// Paris bölgesi için rastgele koordinat üretme
+// Random coordinate generation for the Paris region
 function getRandomParisLocation() {
   return [
     48.8584 + (Math.random() - 0.5) * 0.01,
@@ -16,7 +16,7 @@ function getRandomParisLocation() {
   ];
 }
 
-// Sensör verilerini güncelleme
+
 function updateSensorData() {
   const types = ["traffic", "air", "noise"];
   const type = types[Math.floor(Math.random() * types.length)];
@@ -42,11 +42,11 @@ function updateSensorData() {
 io.on("connection", (socket) => {
   console.log("Client connected");
 
-  // Her 10 saniyede bir veri gönder
+ 
   const interval = setInterval(() => {
     const data = updateSensorData();
     socket.emit("sensorUpdate", data);
-  }, 10000); // Changed from 2000 to 10000 milliseconds
+  }, 10000);
 
   socket.on("disconnect", () => {
     clearInterval(interval);
