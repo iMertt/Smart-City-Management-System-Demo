@@ -11,7 +11,7 @@ import { Icon } from "leaflet";
 import io from "socket.io-client";
 import "leaflet/dist/leaflet.css";
 
-// Özel marker ikonları
+
 const sensorIcons = {
   traffic: new Icon({
     iconUrl: "/icons/traffic-sensor.png",
@@ -27,7 +27,7 @@ const sensorIcons = {
   }),
 };
 
-// Örnek sensör verileri
+
 const sensorData = {
   traffic: [
     {
@@ -84,18 +84,18 @@ const CityMap = ({ onSensorUpdate }) => {
     air: [],
     noise: [],
   });
-  // Paris'in koordinatları (Eiffel Kulesi merkez alındı)
+  // Coordinates of Paris (centered on Eiffel Tower)
   const cityCenter = [48.8584, 2.2945];
 
   useEffect(() => {
-    // WebSocket bağlantısı
+  
     const socket = io("http://localhost:3001");
 
     socket.on("connect", () => {
       console.log("WebSocket connected");
     });
 
-    // Sensör verilerini dinle
+  
     // Add this line inside the sensorUpdate socket listener
     socket.on("sensorUpdate", (data) => {
       setSensorData((prevData) => {
@@ -108,7 +108,7 @@ const CityMap = ({ onSensorUpdate }) => {
       });
     });
 
-    // Simüle edilmiş veri güncellemeleri
+
     const simulateUpdates = () => {
       const types = ["traffic", "air", "noise"];
       setInterval(() => {
@@ -130,10 +130,10 @@ const CityMap = ({ onSensorUpdate }) => {
             status: randomValue > 70 ? "warning" : "good",
           })),
         }));
-      }, 10000); // Changed from 3000 to 10000 milliseconds
+      }, 10000); 
     };
 
-    // Başlangıç verilerini ayarla
+   
     setSensorData({
       traffic: [
         {
@@ -174,7 +174,7 @@ const CityMap = ({ onSensorUpdate }) => {
       ],
     });
 
-    // Simülasyonu başlat
+  
     simulateUpdates();
 
     return () => {
