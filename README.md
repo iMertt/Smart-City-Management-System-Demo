@@ -1,70 +1,203 @@
-# Getting Started with Create React App
+# Smart City Management System - Report Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Akıllı Şehir Yönetim Sistemi - Rapor Oluşturucu
 
-## Available Scripts
+## Overview | Genel Bakış
 
-In the project directory, you can run:
+The Report Generator module is a component of the Smart City Management System that enables users to generate, export, and schedule reports based on sensor data collected throughout the city.
 
-### `npm start`
+Rapor Oluşturucu modülü, şehir genelinde toplanan sensör verilerine dayalı raporlar oluşturmayı, dışa aktarmayı ve zamanlamayı sağlayan Akıllı Şehir Yönetim Sisteminin bir bileşenidir.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Current Features | Mevcut Özellikler
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. PDF Report Generation | PDF Rapor Oluşturma
 
-### `npm test`
+- Creates professional PDF reports with sensor data
+- Includes timestamp and report type
+- Organizes data in a structured table format
+- Shows sensor types, IDs, values, status, and battery levels
+- Automatic formatting with grid layout and custom styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Sensör verileriyle profesyonel PDF raporları oluşturur
+- Zaman damgası ve rapor türünü içerir
+- Verileri yapılandırılmış tablo formatında düzenler
+- Sensör türlerini, ID'lerini, değerlerini, durumlarını ve pil seviyelerini gösterir
+- Izgara düzeni ve özel stil ile otomatik biçimlendirme
 
-### `npm run build`
+### 2. Excel Report Generation | Excel Rapor Oluşturma
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Exports sensor data to Excel format (.xlsx)
+- Includes detailed information for each sensor:
+  - Sensor Type
+  - Sensor ID
+  - Current Value
+  - Status
+  - Last Update Timestamp
+- Automatically organized in worksheet format
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Sensör verilerini Excel formatına (.xlsx) aktarır
+- Her sensör için detaylı bilgiler içerir:
+  - Sensör Türü
+  - Sensör ID
+  - Mevcut Değer
+  - Durum
+  - Son Güncelleme Zamanı
+- Çalışma sayfası formatında otomatik düzenlenir
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Report Scheduling | Rapor Zamanlama
 
-### `npm run eject`
+- Flexible scheduling options:
+  - Daily Reports
+  - Weekly Reports
+  - Monthly Reports
+- User-friendly scheduling interface
+- Customizable report frequency
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Esnek zamanlama seçenekleri:
+  - Günlük Raporlar
+  - Haftalık Raporlar
+  - Aylık Raporlar
+- Kullanıcı dostu zamanlama arayüzü
+- Özelleştirilebilir rapor sıklığı
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technical Details | Teknik Detaylar
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Built with React and Material-UI
+- Uses jsPDF for PDF generation
+- Uses XLSX library for Excel export
+- Implements responsive design
+- Features glass-morphism UI elements
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- React ve Material-UI ile oluşturuldu
+- PDF oluşturma için jsPDF kullanır
+- Excel dışa aktarımı için XLSX kütüphanesi kullanır
+- Duyarlı tasarım uygular
+- Cam-morfizm UI öğeleri içerir
 
-## Learn More
+## Development | Geliştirme
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Installation | Kurulum
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+```
 
-### Code Splitting
+### Running the Application | Uygulamayı Çalıştırma
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+### Building for Production | Derleme
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm run build
+```
 
-### Making a Progressive Web App
+## Note About Demo Version | Demo Versiyon Hakkında Not
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is currently a template/demonstration version showing basic reporting capabilities. For a real-world smart city implementation, additional comprehensive requirements and features would be necessary as detailed below.
 
-### Advanced Configuration
+Bu proje şu anda temel raporlama yeteneklerini gösteren bir şablon/demo versiyonudur. Gerçek bir akıllı şehir uygulaması için aşağıda detaylandırılan ek kapsamlı gereksinimler ve özellikler gereklidir.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Real-World Implementation Requirements | Gerçek Dünya Uygulama Gereksinimleri
 
-### Deployment
+### 1. Security & Authorization | Güvenlik ve Yetkilendirme
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- User role management (admin, supervisor, viewer)
+- Data encryption
+- Access logging
+- GDPR/KVKK compliance
+- Multi-factor authentication
+- Security audit trails
 
-### `npm run build` fails to minify
+- Kullanıcı rol yönetimi (yönetici, denetçi, görüntüleyici)
+- Veri şifreleme
+- Erişim günlüğü
+- GDPR/KVKK uyumluluğu
+- Çok faktörlü kimlik doğrulama
+- Güvenlik denetim izleri
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 2. Sensor Integration | Sensör Entegrasyonu
+
+- Real-time IoT sensor data collection
+- Sensor calibration and maintenance tracking
+- Fault/interruption notifications
+- Data validation mechanisms
+- Sensor health monitoring
+- Backup systems
+
+- Gerçek zamanlı IoT sensör veri toplama
+- Sensör kalibrasyon ve bakım takibi
+- Arıza/kesinti bildirimleri
+- Veri doğrulama mekanizmaları
+- Sensör sağlığı izleme
+- Yedekleme sistemleri
+
+### 3. Advanced Analytics | Gelişmiş Analitik
+
+- Trend analysis
+- Anomaly detection
+- Predictive maintenance
+- Machine learning models
+- Real-time data processing
+- Historical data analysis
+
+- Trend analizi
+- Anomali tespiti
+- Öngörücü bakım
+- Makine öğrenmesi modelleri
+- Gerçek zamanlı veri işleme
+- Geçmiş veri analizi
+
+### 4. System Integrations | Sistem Entegrasyonları
+
+- Municipal systems
+- Emergency services
+- Weather services
+- Traffic management systems
+- Public transportation systems
+- Environmental monitoring systems
+
+- Belediye sistemleri
+- Acil durum servisleri
+- Hava durumu servisleri
+- Trafik yönetim sistemleri
+- Toplu taşıma sistemleri
+- Çevre izleme sistemleri
+
+### 5. Enhanced Reporting | Gelişmiş Raporlama
+
+- Customizable dashboards
+- Real-time alerts
+- Mobile notifications
+- Automated report distribution
+- Data visualization tools
+- KPI tracking
+
+- Özelleştirilebilir gösterge panelleri
+- Gerçek zamanlı uyarılar
+- Mobil bildirimler
+- Otomatik rapor dağıtımı
+- Veri görselleştirme araçları
+- KPI takibi
+
+### 6. Infrastructure Requirements | Altyapı Gereksinimleri
+
+- Scalable cloud infrastructure
+- Redundant systems
+- Disaster recovery
+- High availability setup
+- Load balancing
+- Backup and restore procedures
+
+- Ölçeklenebilir bulut altyapısı
+- Yedekli sistemler
+- Felaket kurtarma
+- Yüksek kullanılabilirlik kurulumu
+- Yük dengeleme
+- Yedekleme ve geri yükleme prosedürleri
+
+## Author | Yazar
+
+[Mert Duyar](https://github.com/iMertt)
